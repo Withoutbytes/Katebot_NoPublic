@@ -298,7 +298,7 @@ public:
             for (size_t j = 0; j < T_Cols; j++)
                 os << v.at(i, j) << "\t";
 
-            os << "\n";
+            //os << "\n";
         }
 
         return os;
