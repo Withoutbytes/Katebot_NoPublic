@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d249c75a-1c70-4870-9317-9bf6a4a036d9}</ProjectGuid>
+    <RootNamespace>KatebotNoPublic</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\utils\xorstr.hpp</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\cheats\ActualAimbot.h" />
+    <ClInclude Include="src\cheats\AspectRatio.h" />
+    <ClInclude Include="src\cheats\Bunnyhop.h" />
+    <ClInclude Include="src\cheats\Chams.h" />
+    <ClInclude Include="src\cheats\FastReload.h" />
+    <ClInclude Include="src\cheats\GlowESP.h" />
+    <ClInclude Include="src\cheats\GrenadePrediction.h" />
+    <ClInclude Include="src\cheats\HitSound.h" />
+    <ClInclude Include="src\cheats\NightMode.h" />
+    <ClInclude Include="src\cheats\PostProcessing.h" />
+    <ClInclude Include="src\cheats\Radar.h" />
+    <ClInclude Include="src\cheats\RankReveal.h" />
+    <ClInclude Include="src\cheats\RecoilCrosshair.h" />
+    <ClInclude Include="src\cheats\Skinchanger.h" />
+    <ClInclude Include="src\cheats\SkyBoxChanger.h" />
+    <ClInclude Include="src\cheats\SniperCrosshair.h" />
+    <ClInclude Include="src\cheats\Triggerbot.h" />
+    <ClInclude Include="src\cheats\ViewModelFOV.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\csgo\csgo.h" />
+    <ClInclude Include="src\csgo\cvar_mgr.hpp" />
+    <ClInclude Include="src\csgo\entity.h" />
+    <ClInclude Include="src\csgo\input_system.hpp" />
+    <ClInclude Include="src\csgo\math.h" />
+    <ClInclude Include="src\csgo\netvars.h" />
+    <ClInclude Include="src\enums.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\mem\mem.h" />
+    <ClInclude Include="src\mem\module.h" />
+    <ClInclude Include="src\offsets.h" />
+    <ClInclude Include="src\utils\Color.h" />
+    <ClInclude Include="src\utils\console.h" />
+    <ClInclude Include="src\utils\Cray.h" />
+    <ClInclude Include="src\utils\files.h" />
+    <ClInclude Include="src\utils\MiscUtils.h" />
+    <ClInclude Include="src\utils\ShootManager.h" />
+    <ClInclude Include="src\utils\typedefs.h" />
+    <ClInclude Include="src\utils\xorstr.hpp" />
+    <ClInclude Include="src\ValveBSP\BSPFile.hpp" />
+    <ClInclude Include="src\ValveBSP\BSPFlags.hpp" />
+    <ClInclude Include="src\ValveBSP\BSPParser.hpp" />
+    <ClInclude Include="src\ValveBSP\BSPStructure.hpp" />
+    <ClInclude Include="src\ValveBSP\Matrix.hpp" />
+    <ClInclude Include="src\ValveBSP\TraceRay.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\config.cpp" />
+    <ClCompile Include="src\csgo\csgo.cpp" />
+    <ClCompile Include="src\csgo\cvar_mgr.cpp" />
+    <ClCompile Include="src\csgo\entity.cpp" />
+    <ClCompile Include="src\csgo\input_system.cpp" />
+    <ClCompile Include="src\csgo\netvars.cpp" />
+    <ClCompile Include="src\DLLMain.cpp" />
+    <ClCompile Include="src\mem\mem.cpp" />
+    <ClCompile Include="src\offsets.cpp" />
+    <ClCompile Include="src\utils\console.cpp" />
+    <ClCompile Include="src\utils\files.cpp" />
+    <ClCompile Include="src\utils\MiscUtils.cpp" />
+    <ClCompile Include="src\ValveBSP\BSPFile.cpp" />
+    <ClCompile Include="src\ValveBSP\BSPParser.cpp" />
+    <ClCompile Include="src\ValveBSP\TraceRay.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
